@@ -3,94 +3,113 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* FGM site nav — auto-injected by process_articles.py — do not edit by hand */
-.fgm-nav {
+:root {
+  --navy: #0f1f38;
+  --navy-mid: #1a2f52;
+  --pink: #f4a7b9;
+  --pink-bright: #e91e8c;
+  --white: #ffffff;
+  --grey: #8a9ab5;
+  --border: rgba(244,167,185,0.22);
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--navy);
+  -webkit-font-smoothing: antialiased;
+  padding-top: 72px;
+}
+.nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   background: rgba(15,31,56,0.92);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(244,167,185,0.22);
+  border-bottom: 1px solid var(--border);
   transition: transform 0.3s ease;
-  font-family: 'DM Sans', Arial, sans-serif;
 }
-.fgm-nav.hidden { transform: translateY(-100%); }
-.fgm-nav-inner {
+.nav.hidden { transform: translateY(-100%); }
+.nav-inner {
   max-width: 1200px; margin: 0 auto;
   padding: 0 40px;
   display: flex; align-items: center; justify-content: space-between;
   height: 72px;
 }
-.fgm-nav-brand {
+.nav-brand {
   font-family: 'Playfair Display', serif;
   font-size: 18px; font-weight: 900;
-  text-decoration: none; color: #ffffff;
+  text-decoration: none; color: var(--white);
   letter-spacing: -0.3px;
 }
-.fgm-nav-brand span { color: #f4a7b9; }
-.fgm-nav-links { display: flex; gap: 28px; align-items: center; }
-.fgm-nav-links a {
+.nav-brand span { color: var(--pink); }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
   font-size: 12px; font-weight: 600; letter-spacing: 1.2px;
-  text-decoration: none; color: #8a9ab5;
+  text-decoration: none; color: var(--grey);
   transition: color 0.2s; text-transform: uppercase;
 }
-.fgm-nav-links a:hover { color: #f4a7b9; }
-.fgm-nav-cta {
-  background: #f4a7b9 !important;
-  color: #0f1f38 !important;
+.nav-links a:hover { color: var(--pink); }
+.nav-cta {
+  background: var(--pink) !important;
+  color: var(--navy) !important;
   padding: 8px 20px !important;
   border-radius: 6px;
   transition: all 0.2s !important;
 }
-.fgm-nav-cta:hover { background: #e91e8c !important; color: #ffffff !important; }
-.fgm-nav-toggle {
+.nav-cta:hover { background: var(--pink-bright) !important; color: var(--white) !important; }
+.nav-toggle {
   display: none; background: none; border: none;
-  color: #ffffff; font-size: 24px; cursor: pointer;
+  color: var(--white); font-size: 24px; cursor: pointer;
 }
-.fgm-mobile-menu {
+.mobile-menu {
   display: none;
   position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
-  background: #1a2f52; padding: 40px;
+  background: var(--navy-mid); padding: 40px;
   flex-direction: column; gap: 24px; z-index: 999;
-  font-family: 'DM Sans', Arial, sans-serif;
 }
-.fgm-mobile-menu a {
-  font-size: 18px; font-weight: 500; color: #ffffff;
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-size: 18px; font-weight: 500; color: var(--white);
   text-decoration: none; padding: 12px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid var(--border);
 }
-.fgm-mobile-menu a:hover { color: #f4a7b9; }
-.fgm-mobile-menu.open { display: flex; }
 @media (max-width: 768px) {
-  .fgm-nav-links { display: none; }
-  .fgm-nav-toggle { display: block; }
-  .fgm-nav-inner { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .nav-inner { padding: 0 20px; }
 }
-body { padding-top: 72px !important; }
 </style>
 </head><body style="margin:0;padding:0;background:#0f1f38;">
-<nav class="fgm-nav" id="fgmNav">
-  <div class="fgm-nav-inner">
-    <a class="fgm-nav-brand" href="https://foodgamemedia.com.au">Food Game <span>Media</span></a>
-    <div class="fgm-nav-links">
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://foodgamemedia.com.au">Food Game <span>Media</span></a>
+    <div class="nav-links">
       <a href="https://foodgamemedia.com.au/#about">About</a>
       <a href="https://foodgamemedia.com.au/#consulting">Services</a>
       <a href="https://foodgamemedia.com.au/#book">The Book</a>
       <a href="https://foodgamemedia.com.au/#podcast">Podcast</a>
       <a href="https://foodgamemedia.com.au/newsletter.html">Newsletter</a>
-      <a href="https://foodgamemedia.com.au/contrarian.html" class="fgm-nav-cta">The Contrarian</a>
+      <a href="https://foodgamemedia.com.au/contrarian.html" class="nav-cta">The Contrarian</a>
     </div>
-    <button class="fgm-nav-toggle"
-      onclick="document.getElementById('fgmMobile').classList.toggle('open')"
-      aria-label="Toggle menu">&#9776;</button>
+    <button class="nav-toggle" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
   </div>
 </nav>
-<div class="fgm-mobile-menu" id="fgmMobile">
+<div class="mobile-menu" id="mobileMenu">
   <a href="https://foodgamemedia.com.au/#about">About</a>
   <a href="https://foodgamemedia.com.au/#consulting">Services</a>
   <a href="https://foodgamemedia.com.au/#book">The Book</a>
   <a href="https://foodgamemedia.com.au/#podcast">Podcast</a>
   <a href="https://foodgamemedia.com.au/newsletter.html">Newsletter</a>
-  <a href="https://foodgamemedia.com.au/contrarian.html">The Contrarian &rarr;</a>
+  <a href="https://foodgamemedia.com.au/contrarian.html">The Contrarian</a>
 </div>
+<script>
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('mainNav');
+  const cur = window.scrollY;
+  if (cur > lastScroll && cur > 200) nav.classList.add('hidden');
+  else nav.classList.remove('hidden');
+  lastScroll = cur;
+});
+</script>
+
 <script>
 (function(){
   var nav=document.getElementById('fgmNav'), last=0;
