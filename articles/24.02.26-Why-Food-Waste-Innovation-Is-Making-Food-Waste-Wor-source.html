@@ -1,4 +1,92 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;padding:32px;background:#f5f5f5;"><div style="font-family:'DM Sans',Arial,sans-serif;color:#1a1a2e;max-width:660px;margin:0 auto;">
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* FGM site nav — auto-injected by process_articles.py — do not edit by hand */
+.fgm-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(15,31,56,0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(244,167,185,0.15);
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+.fgm-nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px; box-sizing: border-box;
+}
+.fgm-nav-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; font-weight: 900;
+  text-decoration: none; color: #ffffff;
+  letter-spacing: -0.3px;
+}
+.fgm-nav-brand span { color: #f4a7b9; }
+.fgm-nav-links { display: flex; gap: 28px; align-items: center; }
+.fgm-nav-links a {
+  font-size: 11px; font-weight: 600; letter-spacing: 1.2px;
+  text-decoration: none; color: #8a9ab5;
+  transition: color 0.2s; text-transform: uppercase;
+}
+.fgm-nav-links a:hover { color: #f4a7b9; }
+.fgm-nav-cta {
+  background: #c0185d !important;
+  color: #ffffff !important;
+  padding: 8px 20px !important;
+  border-radius: 6px;
+  letter-spacing: 0.8px !important;
+}
+.fgm-nav-cta:hover { background: #e91e8c !important; color: #ffffff !important; }
+.fgm-nav-toggle {
+  display: none; background: none; border: none;
+  color: #ffffff; font-size: 24px; cursor: pointer; line-height: 1; padding: 0;
+}
+.fgm-mobile-menu {
+  display: none;
+  position: fixed; top: 68px; left: 0; right: 0; bottom: 0;
+  background: #1a2f52; padding: 40px;
+  flex-direction: column; gap: 24px; z-index: 999;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+.fgm-mobile-menu a {
+  font-size: 16px; font-weight: 600; color: #ffffff;
+  text-decoration: none; letter-spacing: 0.5px;
+}
+.fgm-mobile-menu a:hover { color: #f4a7b9; }
+.fgm-mobile-menu.open { display: flex; }
+@media (max-width: 768px) {
+  .fgm-nav-links { display: none; }
+  .fgm-nav-toggle { display: block; }
+  .fgm-nav-inner { padding: 0 20px; }
+}
+body { padding-top: 88px !important; }
+</style>
+</head><body style="margin:0;padding:32px;background:#f5f5f5;">
+<nav class="fgm-nav" id="fgmNav">
+  <div class="fgm-nav-inner">
+    <a class="fgm-nav-brand" href="https://foodgamemedia.com.au">Food Game <span>Media</span></a>
+    <div class="fgm-nav-links">
+      <a href="https://foodgamemedia.com.au/#about">About</a>
+      <a href="https://foodgamemedia.com.au/#consulting">Services</a>
+      <a href="https://foodgamemedia.com.au/#book">The Book</a>
+      <a href="https://foodgamemedia.com.au/#podcast">Podcast</a>
+      <a href="https://foodgamemedia.com.au/newsletter.html">Newsletter</a>
+      <a href="https://foodgamemedia.com.au/contrarian.html" class="fgm-nav-cta">The Contrarian</a>
+    </div>
+    <button class="fgm-nav-toggle"
+      onclick="document.getElementById('fgmMobile').classList.toggle('open')"
+      aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>
+<div class="fgm-mobile-menu" id="fgmMobile">
+  <a href="https://foodgamemedia.com.au/#about">About</a>
+  <a href="https://foodgamemedia.com.au/#consulting">Services</a>
+  <a href="https://foodgamemedia.com.au/#book">The Book</a>
+  <a href="https://foodgamemedia.com.au/#podcast">Podcast</a>
+  <a href="https://foodgamemedia.com.au/newsletter.html">Newsletter</a>
+  <a href="https://foodgamemedia.com.au/contrarian.html">The Contrarian &rarr;</a>
+</div>
+<div style="font-family:'DM Sans',Arial,sans-serif;color:#1a1a2e;max-width:660px;margin:0 auto;">
   <div style="background:#0f1f38;padding:36px 44px 30px;text-align:center;border-radius:12px 12px 0 0;">
     <div style="font-size:8px;letter-spacing:4px;text-transform:uppercase;color:#f4a7b9;margin-bottom:12px;opacity:0.8;font-weight:600;">The Contrarian &middot; by Food Game Media</div>
     <div style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(22px,3.5vw,32px);font-weight:900;color:#fff;line-height:1.15;font-style:italic;letter-spacing:-0.5px;">Why Food Waste Innovation Is Making Food Waste Worse</div>

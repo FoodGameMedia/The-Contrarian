@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!-- archive.html v1.0 — auto-rebuilt by process_articles.py — do not edit by hand -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Contrarian · Archive · Food Game Media</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',Arial,sans-serif; background:#fdf0f5; color:#0f1f38; }
+.archive-header {
+  background: #0f1f38; padding: 80px 40px 60px; text-align: center;
+}
+.archive-header .overline {
+  font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+  color: #f4a7b9; margin-bottom: 16px; font-weight: 600;
+}
+.archive-header h1 {
+  font-family: 'Playfair Display', serif; font-size: clamp(32px,5vw,56px);
+  font-weight: 900; font-style: italic; color: #fff; letter-spacing: -1px;
+}
+.archive-header .rule {
+  width: 48px; height: 2px;
+  background: linear-gradient(90deg, transparent, #f4a7b9, transparent);
+  margin: 20px auto;
+}
+.archive-header p {
+  font-size: 13px; color: rgba(138,154,181,0.7); letter-spacing: 0.3px;
+}
+.archive-grid {
+  max-width: 880px; margin: 0 auto; padding: 60px 32px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 24px;
+}
+.article-card {
+  background: #fff; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 2px 12px rgba(15,31,56,0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  text-decoration: none; display: block; color: inherit;
+}
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(15,31,56,0.15);
+}
+.card-header {
+  background: #0f1f38; padding: 24px 28px 20px;
+}
+.card-date {
+  font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: rgba(244,167,185,0.7); margin-bottom: 10px; font-weight: 600;
+}
+.card-headline {
+  font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 900;
+  font-style: italic; color: #fff; line-height: 1.25; letter-spacing: -0.3px;
+}
+.card-body {
+  padding: 18px 28px 24px; display: flex; align-items: center; justify-content: space-between;
+}
+.card-read {
+  font-size: 11px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: #e91e8c;
+}
+.card-arrow { color: #f4a7b9; font-size: 14px; }
+@media (max-width: 600px) {
+  .archive-grid { grid-template-columns: 1fr; padding: 32px 16px; }
+  .archive-header { padding: 100px 20px 48px; }
+}
+</style>
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* FGM site nav — auto-injected by process_articles.py — do not edit by hand */
+.fgm-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(15,31,56,0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(244,167,185,0.15);
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+.fgm-nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px; box-sizing: border-box;
+}
+.fgm-nav-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; font-weight: 900;
+  text-decoration: none; color: #ffffff;
+  letter-spacing: -0.3px;
+}
+.fgm-nav-brand span { color: #f4a7b9; }
+.fgm-nav-links { display: flex; gap: 28px; align-items: center; }
+.fgm-nav-links a {
+  font-size: 11px; font-weight: 600; letter-spacing: 1.2px;
+  text-decoration: none; color: #8a9ab5;
+  transition: color 0.2s; text-transform: uppercase;
+}
+.fgm-nav-links a:hover { color: #f4a7b9; }
+.fgm-nav-cta {
+  background: #c0185d !important;
+  color: #ffffff !important;
+  padding: 8px 20px !important;
+  border-radius: 6px;
+  letter-spacing: 0.8px !important;
+}
+.fgm-nav-cta:hover { background: #e91e8c !important; color: #ffffff !important; }
+.fgm-nav-toggle {
+  display: none; background: none; border: none;
+  color: #ffffff; font-size: 24px; cursor: pointer; line-height: 1; padding: 0;
+}
+.fgm-mobile-menu {
+  display: none;
+  position: fixed; top: 68px; left: 0; right: 0; bottom: 0;
+  background: #1a2f52; padding: 40px;
+  flex-direction: column; gap: 24px; z-index: 999;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+.fgm-mobile-menu a {
+  font-size: 16px; font-weight: 600; color: #ffffff;
+  text-decoration: none; letter-spacing: 0.5px;
+}
+.fgm-mobile-menu a:hover { color: #f4a7b9; }
+.fgm-mobile-menu.open { display: flex; }
+@media (max-width: 768px) {
+  .fgm-nav-links { display: none; }
+  .fgm-nav-toggle { display: block; }
+  .fgm-nav-inner { padding: 0 20px; }
+}
+body { padding-top: 88px !important; }
+</style>
+<nav class="fgm-nav" id="fgmNav">
+  <div class="fgm-nav-inner">
+    <a class="fgm-nav-brand" href="https://foodgamemedia.com.au">Food Game <span>Media</span></a>
+    <div class="fgm-nav-links">
+      <a href="https://foodgamemedia.com.au/#about">About</a>
+      <a href="https://foodgamemedia.com.au/#consulting">Services</a>
+      <a href="https://foodgamemedia.com.au/#book">The Book</a>
+      <a href="https://foodgamemedia.com.au/#podcast">Podcast</a>
+      <a href="https://foodgamemedia.com.au/newsletter.html">Newsletter</a>
+      <a href="https://foodgamemedia.com.au/contrarian.html" class="fgm-nav-cta">The Contrarian</a>
+    </div>
+    <button class="fgm-nav-toggle"
+      onclick="document.getElementById('fgmMobile').classList.toggle('open')"
+      aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>
+<div class="fgm-mobile-menu" id="fgmMobile">
+  <a href="https://foodgamemedia.com.au/#about">About</a>
+  <a href="https://foodgamemedia.com.au/#consulting">Services</a>
+  <a href="https://foodgamemedia.com.au/#book">The Book</a>
+  <a href="https://foodgamemedia.com.au/#podcast">Podcast</a>
+  <a href="https://foodgamemedia.com.au/newsletter.html">Newsletter</a>
+  <a href="https://foodgamemedia.com.au/contrarian.html">The Contrarian &rarr;</a>
+</div>
+<div class="archive-header">
+  <div class="overline">Food Game Media</div>
+  <h1>The Contrarian</h1>
+  <div class="rule"></div>
+  <p>Every piece, newest first.</p>
+</div>
+<div class="archive-grid">
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/26.02.26-25-02-26-The-CEO-Who-Believes-Tomorrow-Will-Be-Gre-source.html">
+    <div class="card-header">
+      <div class="card-date">26 Feb 2026</div>
+      <div class="card-headline">The CEO Who Believes Tomorrow Will Be Great While Fearing Tomorrow Will Kill Them</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/26.02.26-25-02-26-The-Housing-Crisis-Made-Gen-Z-The-Most-Lo-source.html">
+    <div class="card-header">
+      <div class="card-date">26 Feb 2026</div>
+      <div class="card-headline">The Housing Crisis Made Gen Z The Most Loyal Workers in Australia's History</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/26.02.26-25-02-26-Top-5-Ways-to-Prevent-Traffic-Jams-And-Wh-source.html">
+    <div class="card-header">
+      <div class="card-date">26 Feb 2026</div>
+      <div class="card-headline">Top 5 Ways to Prevent Traffic Jams (And Why Your Selfish Driving Is Making Everyone Late)</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/24.02.26-The-Fake-Discounts-Case-Actually-Reveals-Australia-source.html">
+    <div class="card-header">
+      <div class="card-date">24 Feb 2026</div>
+      <div class="card-headline">The &#039;Fake Discounts&#039; Case Actually Reveals Australian Consumers Outsmarting Their Own Psychology</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/24.02.26-Why-Food-Waste-Innovation-Is-Making-Food-Waste-Wor-source.html">
+    <div class="card-header">
+      <div class="card-date">24 Feb 2026</div>
+      <div class="card-headline">Why Food Waste Innovation Is Making Food Waste Worse</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/23.02.26-contrarian-fin-review.html">
+    <div class="card-header">
+      <div class="card-date">23 Feb 2026</div>
+      <div class="card-headline">Fin Review</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/23.02.26-mike-cannon-brookes-s-7-billion-loss-is-actually-a.html">
+    <div class="card-header">
+      <div class="card-date">23 Feb 2026</div>
+      <div class="card-headline">Mike Cannon-Brookes&#039;s $7 Billion Loss Is Actually a Masterclass in Entrepreneurship</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/23.02.26-the-12-billion-disconnect-why-australia-s-healthie-SMH.html">
+    <div class="card-header">
+      <div class="card-date">23 Feb 2026</div>
+      <div class="card-headline">The 12 Billion Disconnect Why Australia S Healthie Smh</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/23.02.26-the-government-got-rich-while-you-got-poor-and-tha-SMH.html">
+    <div class="card-header">
+      <div class="card-date">23 Feb 2026</div>
+      <div class="card-headline">The Government Got Rich While You Got Poor — And That&#039;s Exactly the Problem</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/23.02.26-the-great-investment-divide-why-ai-bets-are-soarin-SMH.html">
+    <div class="card-header">
+      <div class="card-date">23 Feb 2026</div>
+      <div class="card-headline">The Great Investment Divide: Why AI Bets Are Soaring While Everything Else Stands Still</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/23.02.26-the-mouth-says-no-the-wallet-says-yes-SMH.html">
+    <div class="card-header">
+      <div class="card-date">23 Feb 2026</div>
+      <div class="card-headline">The Mouth Says No, The Wallet Says Yes</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/23.02.26-why-your-restaurant-needs-an-artist-in-r-abcnetau-source.html">
+    <div class="card-header">
+      <div class="card-date">23 Feb 2026</div>
+      <div class="card-headline">why your restaurant needs an artist in r abcnetau</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+  <a class="article-card" href="https://foodgamemedia.github.io/The-Contrarian/articles/22.02.26-why-your-restaurant-should-start-with-di_the-guardian.html">
+    <div class="card-header">
+      <div class="card-date">22 Feb 2026</div>
+      <div class="card-headline">Why Your Restaurant Should Start With Disaster</div>
+    </div>
+    <div class="card-body">
+      <span class="card-read">Read the piece</span>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+</div>
+</body>
+</html>
