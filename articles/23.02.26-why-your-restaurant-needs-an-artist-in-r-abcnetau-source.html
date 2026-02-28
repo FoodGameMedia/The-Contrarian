@@ -3,17 +3,19 @@
 /* FGM site nav — auto-injected by process_articles.py — do not edit by hand */
 .fgm-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  background: rgba(15,31,56,0.96);
+  background: rgba(15,31,56,0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(244,167,185,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s ease;
   font-family: 'DM Sans', Arial, sans-serif;
 }
+.fgm-nav.hidden { transform: translateY(-100%); }
 .fgm-nav-inner {
   max-width: 1200px; margin: 0 auto;
   padding: 0 40px;
   display: flex; align-items: center; justify-content: space-between;
-  height: 72px; box-sizing: border-box;
+  height: 72px;
 }
 .fgm-nav-brand {
   font-family: 'Playfair Display', serif;
@@ -34,13 +36,12 @@
   color: #0f1f38 !important;
   padding: 8px 20px !important;
   border-radius: 6px;
-  letter-spacing: 1.2px !important;
   transition: all 0.2s !important;
 }
 .fgm-nav-cta:hover { background: #e91e8c !important; color: #ffffff !important; }
 .fgm-nav-toggle {
   display: none; background: none; border: none;
-  color: #ffffff; font-size: 24px; cursor: pointer; line-height: 1; padding: 0;
+  color: #ffffff; font-size: 24px; cursor: pointer;
 }
 .fgm-mobile-menu {
   display: none;
@@ -52,7 +53,7 @@
 .fgm-mobile-menu a {
   font-size: 18px; font-weight: 500; color: #ffffff;
   text-decoration: none; padding: 12px 0;
-  border-bottom: 1px solid rgba(244,167,185,0.22);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .fgm-mobile-menu a:hover { color: #f4a7b9; }
 .fgm-mobile-menu.open { display: flex; }
@@ -88,11 +89,21 @@ body { padding-top: 72px !important; }
   <a href="https://foodgamemedia.com.au/newsletter.html">Newsletter</a>
   <a href="https://foodgamemedia.com.au/contrarian.html">The Contrarian &rarr;</a>
 </div>
+<script>
+(function(){
+  var nav=document.getElementById('fgmNav'), last=0;
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY;
+    nav.classList.toggle('hidden', y>last && y>72);
+    last=y;
+  }, {passive:true});
+})();
+</script>
 
 <div style="font-family:'DM Sans',Arial,sans-serif;color:rgba(255,255,255,0.82);max-width:660px;margin:0 auto;">
   <div style="background:#0f1f38;padding:36px 44px 30px;text-align:center;border-radius:12px 12px 0 0;">
     <div style="font-size:8px;letter-spacing:4px;text-transform:uppercase;color:#f4a7b9;margin-bottom:12px;opacity:0.8;font-weight:600;">The Contrarian &middot; by Food Game Media</div>
-    <div style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(22px,3.5vw,32px);font-weight:900;color:#fff;line-height:1.15;font-style:italic;letter-spacing:-0.5px;">why your restaurant needs an artist in r abcnetau</div>
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(32px,4.5vw,56px);font-weight:900;color:#fff;line-height:1.1;font-style:italic;letter-spacing:-0.5px;">why your restaurant needs an artist in r abcnetau</div>
     <div style="width:48px;height:2px;background:linear-gradient(90deg,transparent,#f4a7b9,transparent);margin:18px auto 0;"></div>
     <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:12px;letter-spacing:0.3px;">23 February 2026</div>
   </div>
