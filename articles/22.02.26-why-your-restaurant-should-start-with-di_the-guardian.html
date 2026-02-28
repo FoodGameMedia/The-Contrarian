@@ -13,7 +13,7 @@
   max-width: 1200px; margin: 0 auto;
   padding: 0 40px;
   display: flex; align-items: center; justify-content: space-between;
-  height: 68px; box-sizing: border-box;
+  height: 72px; box-sizing: border-box;
 }
 .fgm-nav-brand {
   font-family: 'Playfair Display', serif;
@@ -24,17 +24,18 @@
 .fgm-nav-brand span { color: #f4a7b9; }
 .fgm-nav-links { display: flex; gap: 28px; align-items: center; }
 .fgm-nav-links a {
-  font-size: 11px; font-weight: 600; letter-spacing: 1.2px;
+  font-size: 12px; font-weight: 600; letter-spacing: 1.2px;
   text-decoration: none; color: #8a9ab5;
   transition: color 0.2s; text-transform: uppercase;
 }
 .fgm-nav-links a:hover { color: #f4a7b9; }
 .fgm-nav-cta {
-  background: #c0185d !important;
-  color: #ffffff !important;
+  background: #f4a7b9 !important;
+  color: #0f1f38 !important;
   padding: 8px 20px !important;
   border-radius: 6px;
-  letter-spacing: 0.8px !important;
+  letter-spacing: 1.2px !important;
+  transition: all 0.2s !important;
 }
 .fgm-nav-cta:hover { background: #e91e8c !important; color: #ffffff !important; }
 .fgm-nav-toggle {
@@ -43,14 +44,15 @@
 }
 .fgm-mobile-menu {
   display: none;
-  position: fixed; top: 68px; left: 0; right: 0; bottom: 0;
+  position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
   background: #1a2f52; padding: 40px;
   flex-direction: column; gap: 24px; z-index: 999;
   font-family: 'DM Sans', Arial, sans-serif;
 }
 .fgm-mobile-menu a {
-  font-size: 16px; font-weight: 600; color: #ffffff;
-  text-decoration: none; letter-spacing: 0.5px;
+  font-size: 18px; font-weight: 500; color: #ffffff;
+  text-decoration: none; padding: 12px 0;
+  border-bottom: 1px solid rgba(244,167,185,0.22);
 }
 .fgm-mobile-menu a:hover { color: #f4a7b9; }
 .fgm-mobile-menu.open { display: flex; }
@@ -59,9 +61,9 @@
   .fgm-nav-toggle { display: block; }
   .fgm-nav-inner { padding: 0 20px; }
 }
-body { padding-top: 88px !important; }
+body { padding-top: 72px !important; }
 </style>
-</head><body style="margin:0;padding:40px 16px;background:#f0ede8;">
+</head><body style="margin:0;padding:0;background:#0f1f38;">
 <nav class="fgm-nav" id="fgmNav">
   <div class="fgm-nav-inner">
     <a class="fgm-nav-brand" href="https://foodgamemedia.com.au">Food Game <span>Media</span></a>
