@@ -128,23 +128,7 @@ window.addEventListener('scroll', () => {
       <div id="fftText" style="font-size:15px;line-height:1.85;color:#e8e0f0;font-family:'DM Sans',Arial,sans-serif;font-style:italic;">The practical provocation, then, is not about restaurant recommendations. It is about what this crop of openings reveals about what people are actually hungry for, which turns out to be the opposite of what most of the innovation economy thinks it should be selling. The premium is no longer on the new. The premium is on the feeling that something could not possibly have been invented yesterday. The question for anyone building anything, a restaurant, a brand, a neighbourhood, a product, is not &quot;what makes this fresh?&quot; It is &quot;what makes this feel like it was always going to exist?&quot;</div>
       <p style="font-size:13px;color:#888;margin:16px 0 0;font-style:italic;">- JB</p>
     </div>
-    <div id="fftControls" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px 20px;margin-top:8px;margin-bottom:28px;">
-      <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(138,154,181,0.5);font-weight:600;margin-bottom:10px;">Tune the closer</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;">
-        <button onclick="rewriteCloser('humorous')" style="font-size:11px;padding:5px 12px;border-radius:20px;border:1px solid rgba(244,167,185,0.3);background:transparent;color:#f4a7b9;cursor:pointer;">Humorous</button>
-        <button onclick="rewriteCloser('grumpy old man')" style="font-size:11px;padding:5px 12px;border-radius:20px;border:1px solid rgba(244,167,185,0.3);background:transparent;color:#f4a7b9;cursor:pointer;">Grumpy old man</button>
-        <button onclick="rewriteCloser('compassionate')" style="font-size:11px;padding:5px 12px;border-radius:20px;border:1px solid rgba(244,167,185,0.3);background:transparent;color:#f4a7b9;cursor:pointer;">Compassionate</button>
-        <button onclick="rewriteCloser('provocative')" style="font-size:11px;padding:5px 12px;border-radius:20px;border:1px solid rgba(244,167,185,0.3);background:transparent;color:#f4a7b9;cursor:pointer;">Provocative</button>
-        <button onclick="rewriteCloser('deadpan')" style="font-size:11px;padding:5px 12px;border-radius:20px;border:1px solid rgba(244,167,185,0.3);background:transparent;color:#f4a7b9;cursor:pointer;">Deadpan</button>
-      </div>
-      <div style="display:flex;gap:8px;">
-        <input id="fftCustomTone" placeholder="Or type your own tone..." style="flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:8px 12px;color:#e8e0f0;font-size:12px;outline:none;" onkeydown="if(event.key==='Enter'){rewriteCloser(document.getElementById('fftCustomTone').value.trim());}">
-        <button onclick="rewriteCloser(document.getElementById('fftCustomTone').value.trim()||'original voice')" style="padding:8px 16px;background:#e91e8c;border:none;border-radius:6px;color:#fff;font-size:12px;font-weight:600;cursor:pointer;">Rewrite</button>
-      </div>
-      <div id="fftLoading" style="display:none;font-size:12px;color:rgba(244,167,185,0.6);margin-top:8px;">Rewriting closer...</div>
-    </div>
-
-    <div style="background:#fce4ec;padding:28px 32px;border-radius:10px;margin-top:32px;">
+<div style="background:#fce4ec;padding:28px 32px;border-radius:10px;margin-top:32px;">
       <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#e91e8c;font-weight:700;margin-bottom:18px;">About the Author</div>
       <table cellpadding="0" cellspacing="0" border="0" width="100%">
         <tr>
